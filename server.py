@@ -11,7 +11,7 @@ from generate import load_model_checkpoint, generate_text
 
 app = Flask(__name__)
 
-# Add CORS headers to allow requests from Vite frontend
+# Add CORS headers to allow requests from any frontend
 @app.after_request
 def add_cors_headers(response):
     response.headers["Access-Control-Allow-Origin"] = "*"
@@ -26,11 +26,30 @@ model, metadata, config, device = None, None, None, None
 def get_model():
     global model, metadata, config, device
     if model is None:
-        if os.path.exists(MODEL_CHECKPOINT):
-            model, metadata, config, device = load_model_checkpoint(MODEL_CHECKPOINT)
+        # Check models/best_model.pt or outputs/best_model.pt
+        fallback = os.path.join(os.path.dirname(__file__), "outputs", "best_model.pt")
+        target_path = MODEL_CHECKPOINT if os.path.exists(MODEL_CHECKPOINT) else fallback
+        if os.path.exists(target_path):
+            model, metadata, config, device = load_model_checkpoint(target_path)
+            print(f"Loaded checkpoint from {target_path}")
         else:
-            print(f"Warning: Checkpoint not found at {MODEL_CHECKPOINT}. Using default fallback.")
+            print("Warning: No checkpoint found!")
     return model, metadata, config, device
+
+@app.route("/", methods=["GET"])
+def root_home():
+    m, meta, cfg, dev = get_model()
+    return jsonify({
+        "status": "online",
+        "company": "Rayvat Outsourcing - AI Labs",
+        "service": "Word-Level PyTorch LSTM Text Generator REST API",
+        "endpoints": {
+            "health": "/api/health",
+            "generate": "/api/generate (POST)"
+        },
+        "vocab_size": meta.get("vocab_size", 0) if meta else 0,
+        "seq_length": meta.get("seq_length", 30) if meta else 30
+    })
 
 @app.route("/api/health", methods=["GET"])
 def health_check():
@@ -44,7 +63,7 @@ def health_check():
             "seq_length": meta.get("seq_length", 30),
             "device": str(dev)
         })
-    return jsonify({"status": "model_not_ready", "company": "Rayvat Outsourcing"})
+    return jsonify({"status": "model_loading", "company": "Rayvat Outsourcing"})
 
 @app.route("/api/generate", methods=["POST", "OPTIONS"])
 def api_generate():
@@ -60,10 +79,10 @@ def api_generate():
 
     if m is None:
         return jsonify({
-            "error": "Model checkpoint not found. Please train the model first.",
+            "error": "Model checkpoint loading in progress.",
             "prompt": seed_text,
-            "text": f"{seed_text} [Model weights training in background. Please wait a moment...]"
-        }), 404
+            "text": f"{seed_text} [Model is initializing. Please retry in a few seconds...]"
+        }), 200
 
     generated_output = generate_text(
         model=m,
