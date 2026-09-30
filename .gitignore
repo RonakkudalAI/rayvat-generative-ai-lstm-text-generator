@@ -6,7 +6,6 @@ __pycache__/
 # PyTorch Checkpoints & Large Data Files
 data/raw_text.txt
 data/shakespeare.txt
-models/best_model.pt
 outputs/*.png
 outputs/experiment_results.csv
 
