@@ -1,0 +1,19 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch Checkpoints & Large Data Files
+data/raw_text.txt
+data/shakespeare.txt
+models/best_model.pt
+outputs/*.png
+outputs/experiment_results.csv
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environment
+env/
+venv/
+ENV/

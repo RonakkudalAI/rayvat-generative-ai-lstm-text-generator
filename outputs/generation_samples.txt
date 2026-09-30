@@ -1,0 +1,198 @@
+=====================================================
+  LSTM TEXT GENERATOR - SAMPLE OUTPUT EVALUATION     
+=====================================================
+
+--- SEED: 'first citizen:' ---
+
+[Temperature: 0.2]
+first citizen:
+i will not the stone of the store of the sent
+the store the stand the sented to the sent
+the stand the sent the store the stand them to the sent
+the sent the sent the promised the store the sented th
+----------------------------------------
+
+[Temperature: 0.7]
+first citizen:
+so you will stay have down were the hands.
+
+brakentus:
+seem her your enters of your than a live,
+beat them not the suffer of a groan,
+be wear in heavy in the bread:
+no sund with a shall shall not cou
+----------------------------------------
+
+[Temperature: 1.2]
+first citizen:
+here, when in, no peaces have fellow fight!
+
+first murderer:
+say, and fly?
+
+queen elizabeth:
+the sairs his prince of the king, bestings drawn.
+
+juliet:
+course, father, mursh'd i shall make is thee.
+
+
+----------------------------------------
+
+
+--- SEED: 'to be, or not to be:' ---
+
+[Temperature: 0.2]
+to be, or not to be:
+the sent the sent the store of the sented to the store
+the sent the sent the sent the sent them the course.
+
+coriolanus:
+i will be the sent the sented the stone,
+the stand the strike the sented the s
+----------------------------------------
+
+[Temperature: 0.7]
+to be, or not to be:
+no sir he do him set the poor and in the head:
+and friends, my sick'd that not thou hast so.
+
+pompey:
+i will the strive in you well be people
+i to be for the grace, sir, there is his death.
+
+menenius
+----------------------------------------
+
+[Temperature: 1.2]
+to be, or not to be:
+what is anoon no erge to cumbent
+nor man; o, cause?
+
+polixenes:
+
+brenitab:
+well says i do yea, or lassibly
+sir, from gateful again: a greater'd born!
+
+queen though it senve!
+these edward, i dendenge 
+----------------------------------------
+
+
+--- SEED: 'romeo:' ---
+
+[Temperature: 0.2]
+romeo:
+i will not the store to the son, the sent them.
+
+sicinius:
+no, there is the sent the sent the state to the services
+the stand the stand the sented to the sent
+the people the sent the sent the sented 
+----------------------------------------
+
+[Temperature: 0.7]
+romeo:
+marry is prayer, he warrant marriant with this,
+there's not you shall not such such thou to an else?
+
+menenius:
+he is a name?
+
+hastings:
+thou shalt be were here in the cousin from on my field.
+
+king 
+----------------------------------------
+
+[Temperature: 1.2]
+romeo:
+i have a calus
+from me, gorred, marry, fit well mys our revence.
+
+queen:
+it was your isand, as i head is sway.
+
+gloucester:
+i with what terrage became, to murder to
+though thee mine.
+
+romeo:
+good min
+----------------------------------------
+
+
+--- SEED: 'o mistress mine' ---
+
+[Temperature: 0.2]
+o mistress mine:
+i will not the sent the prince of the services.
+
+cominius:
+i shall be the state the store to be soul to the sent
+the strike the sent the store to the state,
+and the stand the stand the stand the sen
+----------------------------------------
+
+[Temperature: 0.7]
+o mistress mine edward:
+if with you, breathe the face.
+
+buckingham:
+when you shall not a such cause was shall be the satisful,
+then therefore i send the head hands not your course
+in you have be with them may news.
+
+----------------------------------------
+
+[Temperature: 1.2]
+o mistress mine,
+and my lord,
+the wont o' the rather's pause on when i shall wake
+so?
+
+king richard ii:
+
+king edward iv:
+why, speak my hell's seeps. first my nises;
+as yet he gentleman: the lady's forches:
+for will 
+----------------------------------------
+
+
+--- SEED: 'shall i compare thee' ---
+
+[Temperature: 0.2]
+shall i compare thee,
+and the strike the sent the sent the strike the stone,
+and the strive the sent the sented the sent thee.
+
+brutus:
+i do the sent the strive the stone to the stone,
+and the sent the sent the strike th
+----------------------------------------
+
+[Temperature: 0.7]
+shall i compare thee.
+
+gloucester:
+as here thou art the sent of this any and thee.
+
+clown:
+if thou content to be not to the friends of well be this?
+
+buckingham:
+and that be to this person your soul we will not she shoul
+----------------------------------------
+
+[Temperature: 1.2]
+shall i compare thee?
+nay fair talk, come, nay, and was matter,
+as the cliving here's heart father, bear prifal hers
+and princles farewell? where's not hen, come, then?
+
+pompey:
+'tis doubl me, my so. if you, no leison yo
+----------------------------------------
+
