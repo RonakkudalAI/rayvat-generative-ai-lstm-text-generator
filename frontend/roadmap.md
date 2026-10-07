@@ -1,0 +1,4 @@
+- [x] Review the assignment and supplied company screenshot.
+- [x] Create a documented LSTM training and text-generation script.
+- [x] Build an animated project interface that clearly distinguishes its browser preview from actual model output.
+- [x] Verify the preview and interactions.
